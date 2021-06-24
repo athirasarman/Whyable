@@ -1,33 +1,28 @@
 @import "src/styles/variables";
 
-.full-width {
-  width: 100%;
+.content {
+    padding: 16px 0 0 16px;
+    background-color: $dashboard-background-color;
 }
 
-.card {
-  margin: 20px auto;
-  background-color: $dashboard-background-color;
-  width: 80%;
-  @media (max-width: $normal) {
-  flex-wrap: wrap;
-  }
+.grid-container {
+  margin: 20px;
 }
 
-.mat-radio-button {
-  display: block;
-  margin: 5px 0;
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  width: 200px;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
+.grid-tile{
+    margin:0 0 0 0;
 }
 
-.col {
-  flex: 1;
-  margin-right: 20px;
-}
 
-.col:last-child {
-  margin-right: 0;
+.dashboard-card-content {
+  text-align: left;
 }

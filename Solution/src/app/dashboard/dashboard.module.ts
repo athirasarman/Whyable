@@ -25,7 +25,6 @@ import { AdditemComponent } from './additem/additem.component';
 import { ItemslistComponent } from './itemslist/itemslist.component';
 
 
-
 @NgModule({
   declarations: [
   LayoutComponent,

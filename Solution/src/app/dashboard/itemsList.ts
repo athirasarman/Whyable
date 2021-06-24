@@ -1,7 +1,7 @@
 import { Items } from './items';
 
 
-export const items:Items={
+export const List:Items={
    "data":{
       "items":[
          {
@@ -354,6 +354,7 @@ export const items:Items={
             "deleted":false,
             "deactivated":false,
             "status":"available",
+            "availability":"public",
             "location":"Bangalore 560",
             "title":"MTB",
             "rent_rate":10,
@@ -373,6 +374,7 @@ export const items:Items={
             "deleted":false,
             "deactivated":false,
             "status":"unavailable",
+            "availability":"public",
             "location":"Birmingham NW2",
             "title":"earth",
             "rent_rate":99,
@@ -392,6 +394,7 @@ export const items:Items={
             "deleted":false,
             "deactivated":false,
             "status":"available",
+            "availability":"public",
             "location":"Bangalore 560",
             "title":"Painting",
             "rent_rate":100,
@@ -411,6 +414,7 @@ export const items:Items={
             "deleted":false,
             "deactivated":false,
             "status":"available",
+            "availability":"public",
             "title":"Kayak",
             "rent_rate":20,
             "owner_id":"5d00f26430f21e20e6c70e55",
@@ -430,6 +434,7 @@ export const items:Items={
             "deleted":false,
             "deactivated":false,
             "status":"available",
+            "availability":"public",
             "title":"Karcher K4 Pressure Washer",
             "rent_rate":8.5,
             "owner_id":"5d00f26430f21e20e6c70e55",
@@ -449,6 +454,7 @@ export const items:Items={
             "deleted":false,
             "deactivated":false,
             "status":"available",
+            "availability":"public",
             "title":"Cordless Electric Mower - BOSCH",
             "rent_rate":10,
             "owner_id":"5d00f26430f21e20e6c70e55",
@@ -468,6 +474,7 @@ export const items:Items={
             "deleted":false,
             "deactivated":false,
             "status":"available",
+            "availability":"public",
             "title":"Cordless drill",
             "rent_rate":6,
             "owner_id":"5d00f26430f21e20e6c70e55",
@@ -487,6 +494,7 @@ export const items:Items={
             "deleted":false,
             "deactivated":false,
             "status":"available",
+            "availability":"public",
             "title":"How To Train your Dragon Hiccup outfit",
             "rent_rate":0,
             "owner_id":"5d00f26430f21e20e6c70e55",
@@ -506,6 +514,7 @@ export const items:Items={
             "deleted":false,
             "deactivated":false,
             "status":"available",
+            "availability":"public",
             "title":"Spider Man Outfit Age 5-6",
             "rent_rate":0,
             "owner_id":"5d00f26430f21e20e6c70e55",
@@ -525,6 +534,7 @@ export const items:Items={
             "deleted":false,
             "deactivated":false,
             "status":"available",
+            "availability":"public",
             "title":"Extra large catering size, stainless steel saucepan",
             "rent_rate":1,
             "owner_id":"5d00f26430f21e20e6c70e55",

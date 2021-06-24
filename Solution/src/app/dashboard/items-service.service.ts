@@ -1,17 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Items } from './items';
 import { Observable, of } from 'rxjs';
+import { List } from './itemsList';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemsServiceService {
   
-  items:Observable<Items[]>=of([]);
-  constructor() { }
+  itemsList:Items={} as Items;
+  constructor() {
+  }
 
-  getItemsList():Observable<Items[]>
+  getItemsList():Items
   {
-    return this.items;
+    console.log(List.data.items);
+    this.itemsList=List;
+    return this.itemsList;
   }
 }
