@@ -8,13 +8,25 @@
 .example-sidenav-content {
   display: flex;
   height: 100%;
-  align-items: center;
-  justify-content: center;
-  background-color: $dashboard-background-color
+  background-color: $dashboard-background-color;
+  width:75%;
 }
 
 .example-sidenav {
   padding: 20px;
   background-color: $dashboard-background-color;
-  border:0 0 0 0;
+  width:25%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  flex: 1;
+}
+
+.col:last-child {
+  margin-right: 0;
 }

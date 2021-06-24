@@ -1,10 +1,35 @@
-<form [formGroup]="categories" >
-
- <mat-form-field>
-   <input matInput placeholder="Categories">
- </mat-form-field>
-
- <mat-form-field>
-   
- </mat-form-field>
+<form [formGroup]="addressForm" >
+  
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="">
+            <mat-label>Categories</mat-label>
+              <input type="text"
+                     placeholder="Pick one"
+                     aria-label="Categories"
+                     matInput
+                     [formControl]="categoriesControl"
+                     [matAutocomplete]="auto">
+              <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+             <mat-option *ngFor="let option of categoriesList | async" [value]="option.name">
+                {{option.name}}
+            </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+            <ul  class="">
+            <li *ngFor="let option of categoriesList | async">
+               <mat-checkbox>
+                     {{option.name}}
+              </mat-checkbox>
+            </li>
+          </ul>
+         
+        </div>
+       
+      </div>
+      
 </form>

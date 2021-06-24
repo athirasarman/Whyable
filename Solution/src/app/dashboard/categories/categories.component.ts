@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { Observable, of } from 'rxjs';
+import { FormBuilder, Validators, FormControl } from '@angular/forms';
+
+import { CategoriesServiceService } from '../categories-service.service';
+import { Categories } from '../categories';
 
 @Component({
   selector: 'app-categories',
@@ -7,9 +11,18 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./categories.component.scss']
 })
 export class CategoriesComponent {
-  categories = this.fb.group({});
+  addressForm = this.fb.group({
+    
+  });
 
+  categoriesList: Observable<Categories[]>=of([]);
+  categoriesControl: FormControl=new FormControl();
+ 
+  constructor(private fb: FormBuilder,
+              private  categoriesService: CategoriesServiceService) {
+    this.categoriesList=of(this.categoriesService.getCategoriesList());
 
-  constructor(private fb: FormBuilder) {}
+  }
 
+ 
 }
