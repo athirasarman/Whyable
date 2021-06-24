@@ -22,6 +22,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component';
 import { AdditemComponent } from './additem/additem.component';
+import { ItemslistComponent } from './itemslist/itemslist.component';
 
 
 
@@ -30,7 +31,8 @@ import { AdditemComponent } from './additem/additem.component';
   LayoutComponent,
   CategoriesComponent,
   SearchComponent,
-  AdditemComponent
+  AdditemComponent,
+  ItemslistComponent
   ],
   imports: [
     CommonModule,
