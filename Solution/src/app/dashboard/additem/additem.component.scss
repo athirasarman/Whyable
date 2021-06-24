@@ -1,0 +1,40 @@
+@import "src/styles/variables";
+
+.full-width {
+  width: 100%;
+
+}
+
+.add-item{
+  padding-left: 20px;
+  width:200px;
+  background-color: $dashboard-background-color;
+  border-style: dashed;
+  border-color: $font-color;
+  justify-content: center;
+  align-content: center;
+  height:200px;
+}
+
+.mat-radio-button {
+  display: block;
+  margin: 5px 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.col:last-child {
+  margin-right: 0;
+}
+
+.mat-button{
+  color:$font-color;
+}

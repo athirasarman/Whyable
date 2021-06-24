@@ -21,6 +21,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component';
+import { AdditemComponent } from './additem/additem.component';
 
 
 
@@ -28,7 +29,8 @@ import { SearchComponent } from './search/search.component';
   declarations: [
   LayoutComponent,
   CategoriesComponent,
-  SearchComponent
+  SearchComponent,
+  AdditemComponent
   ],
   imports: [
     CommonModule,
