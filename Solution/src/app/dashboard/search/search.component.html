@@ -1,10 +1,12 @@
-<form [formGroup]="addressForm">
+<form [formGroup]="addressForm" class="search">
         <div class="row">
-        <div class="col">
-          <mat-form-field class="full-width">
-              <input type="text" matInput placeholder="Find Things you Need, borrow them, save money & the planet">
-            <mat-icon matSuffix>mode_edit</mat-icon>
+                 <mat-form-field class="full-width search">
+              <input type="text" class= "" matInput placeholder="Find Things you Need, borrow them, save money & the planet">
+            <!--<mat-icon >mode_edit</mat-icon>-->
+            <button matSuffix mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
         </mat-form-field>
         </div>
-      </div>
+      
       </form>

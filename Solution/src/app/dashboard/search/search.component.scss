@@ -1,16 +1,15 @@
-.full-width {
-  width: 100%;
+@import "src/styles/variables";
+
+.search {
+  padding-left: 20px;
+  padding-right: 10px;
+  width:90%;
+  margin: 0 8px 8px 0;
+  justify-content: center;
+  align-content: center;
+  display: fixed;
 }
 
-.shipping-card {
-  min-width: 120px;
-  margin: 20px auto;
-}
-
-.mat-radio-button {
-  display: block;
-  margin: 5px 0;
-}
 
 .row {
   display: flex;
@@ -19,9 +18,22 @@
 
 .col {
   flex: 1;
+  margin-left: 0px;
   margin-right: 20px;
 }
 
 .col:last-child {
   margin-right: 0;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.textbox{
+  height: 20px;
+}
+
+.mat-checkbox{
+  color:$font-color;
 }

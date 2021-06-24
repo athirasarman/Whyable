@@ -1,12 +1,5 @@
 @import "src/styles/variables";
 
-
-
-.mat-radio-button {
-  display: block;
-  margin: 5px 0;
-}
-
 .row {
   display: flex;
   flex-direction: row;
@@ -14,14 +7,30 @@
 
 .col {
   flex: 1;
-  margin-right: 20px;
+ // margin-right: 10px;
 }
 
 .col:last-child {
   margin-right: 0;
 }
 
-ul {
+ul 
+{
   list-style-type: none;
   margin-top: 4px;
+}
+
+li{
+  
+  margin-left:0px;
+  align-content: left;
+}
+
+.category {
+  width:100%;
+  margin: 0 8px 8px 0;
+}
+
+.mat-checkbox{
+  color:$font-color;
 }
