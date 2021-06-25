@@ -7,9 +7,10 @@
   margin: 0 8px 8px 0;
   justify-content: center;
   align-content: center;
-
+  position: relative;
+  display: flex;
+  flex-direction: row;
 }
-
 
 input {
   width: 100%;
@@ -17,7 +18,7 @@ input {
   padding: 12px 12px;
   box-sizing: border-box;
   border:none;
-  border-radius: 30px;
+  border-radius: 50px;
   margin: 0 0 0 0;
   background-color: $search-background-color;
   font-size: 16px; 
@@ -25,14 +26,17 @@ input {
   justify-content: center;
   box-shadow: 0 10px 10px 0 $grey;
   outline:none !important;
- // color: $dashboard-background-color;
 }
 
 
-.button{
+.search-button{
   position: absolute; 
   background-color:$button-color !important;
-  top: 4%; 
-  right:4%; 
+  right:3%;
+  top:10%;
+  @media (max-height: $medium) {
+    top:9% !important;
+    right:10% !important;
+  };
   float: right;   
 }

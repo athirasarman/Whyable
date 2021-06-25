@@ -5,14 +5,6 @@
   flex-direction: row;
 }
 
-.col {
-  flex: 1;
- // margin-right: 10px;
-}
-
-.col:last-child {
-  margin-right: 0;
-}
 
 ul 
 {
@@ -29,8 +21,9 @@ li{
 .category {
   width:100%;
   margin: 0 8px 8px 0;
+  display: flex
 }
 
 .mat-checkbox{
-  color:$font-color;
+  color:$dark-grey !important;
 }

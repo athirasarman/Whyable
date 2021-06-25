@@ -3,15 +3,19 @@
 .example-container {
   width: 100%;
   height: 100%;
+  @media (max-width: $normal) {
+    flex-wrap: wrap;
+  }
 }
 
-.example-sidenav-content {
+.example-sidenav-content { 
   height: 100%;
   padding: 20px 0 0 0;
   background-color: $dashboard-background-color;
-  margin-left:20%;
+ // margin-left:20%;
   float: right;
-  width: 80%;
+  width: 100%;
+  
 }
 
 .example-sidenav {
@@ -19,13 +23,41 @@
   background-color: $dashboard-background-color;
   width: 20%; 
   height: 100% !important;
-  position: fixed;
   float: left;
   justify-content: center;
+
+
+}
+.mat-drawer
+{
+  border:none;
+}
+button{
+  background-color:$button-color !important;
+
+}
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+    @media (max-width: $small) {
+    flex-wrap: wrap;
+  }
+}
+
+.col {
+ // flex: 1;
+   
+    @media (max-width: $small) {
+    flex-wrap: wrap;
+    float: left;
+  }
+}
+
+.col:last-child {
+  margin-right: 0;
 }
 
 
 
-.full-width {
-  width: 100%;
-}

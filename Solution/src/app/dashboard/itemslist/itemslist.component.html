@@ -1,13 +1,13 @@
 <div class="content">
  
 
-  <mat-grid-list cols="4" rowHeight="365px">
+  <mat-grid-list  [cols]="breakpoint"  rowHeight="365px" (window:resize)="onResize($event)">
     <mat-grid-tile class="grid-tile add-item"  [colspan]="1" [rowspan]="1">
      <app-additem></app-additem>
     </mat-grid-tile>
 
 
-    <mat-grid-tile class="grid-tile" *ngFor="let item of itemList.data.items" [colspan]="1" [rowspan]="1">
+    <mat-grid-tile class="grid-tile" *ngFor="let item of itemList.data.items"  [colspan]="1" [rowspan]="1" >
       <mat-card class="dashboard-card">
         
       <img mat-card-image class="image" src="../../assets/images/no_image_available.jpeg">

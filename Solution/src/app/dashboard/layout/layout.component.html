@@ -1,10 +1,20 @@
 
-<div class="example-container">
-<div class="example-sidenav">
-  <app-categories></app-categories>
-</div>
-<div class="example-sidenav-content">
+<mat-drawer-container class="example-container" autosize >
+  <mat-drawer #drawer class="example-sidenav" mode="side" (window:resize)="drawer.toggle()" >
+      <app-categories></app-categories>
+  
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+  
+    <button mat-mini-fab (click)="drawer.toggle()" >
+     <mat-icon>reorder</mat-icon>
+    </button>
+
   <app-search></app-search>
+
   <app-itemslist></app-itemslist>
+ 
 </div>
-</div>
+
+</mat-drawer-container>
