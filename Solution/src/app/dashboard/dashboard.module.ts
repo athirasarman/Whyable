@@ -19,6 +19,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component';
 import { AdditemComponent } from './additem/additem.component';
@@ -39,6 +40,7 @@ import { ItemslistComponent } from './itemslist/itemslist.component';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
+    MatTooltipModule,
     MatIconModule,
     MatButtonModule,
     LayoutModule,
