@@ -1,7 +1,7 @@
 <div class="content">
  
 
-  <mat-grid-list cols="4" rowHeight="400px">
+  <mat-grid-list cols="4" rowHeight="365px">
     <mat-grid-tile class="grid-tile add-item"  [colspan]="1" [rowspan]="1">
      <app-additem></app-additem>
     </mat-grid-tile>
@@ -10,11 +10,12 @@
     <mat-grid-tile class="grid-tile" *ngFor="let item of itemList.data.items" [colspan]="1" [rowspan]="1">
       <mat-card class="dashboard-card">
         
-      <img mat-card-image src="../../assets/images/no_image_available.jpeg">
+      <img mat-card-image class="image" src="../../assets/images/no_image_available.jpeg">
         <mat-card-content class="dashboard-card-content">
-          <h3>{{item.title}}</h3>
-          <p>{{item.rent_rate}}</p>
-          <p>{{item.location}}</p>
+          <h3 class="title">{{item.title}}</h3>
+          <p class="rate" *ngIf="item.rent_rate==0">Free</p>
+          <p class="rate" *ngIf="item.rent_rate>0">Rate:£{{item.rent_rate}}/day</p>
+            <p>{{item.location}}</p>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>

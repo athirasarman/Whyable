@@ -1,4 +1,6 @@
 @import "src/styles/variables";
+@import "src/styles/fonts";
+
 
 .content {
     padding: 16px 0 0 16px;
@@ -17,6 +19,7 @@
   right: 15px;
   bottom: 15px;
   width: 250px;
+  border-radius: 25px;
 }
 
 .grid-tile{
@@ -28,16 +31,27 @@
   text-align: left;
 }
 
-/*mat-grid-tile:first-child {
-    margin-left: 100%;
-}*/
+.image{
+    max-height: 70%;
+}
 
 .add-item{
  //margin-top: 15px;
  position: absolute;
  top:2% !important;
- left:2% !important;
  transform: translate(0,-20%);
  float: left;   
   z-index: 1030;
+}
+
+.rate{
+    color: $primary-color;
+}
+
+.title {
+    display:block; width: 190px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: $fw-bold;
 }
