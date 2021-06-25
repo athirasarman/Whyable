@@ -12,7 +12,7 @@
         
       <img mat-card-image class="image" src="../../assets/images/no_image_available.jpeg">
         <mat-card-content class="dashboard-card-content">
-          <h3 class="title">{{item.title}}</h3>
+          <h3 class="title" >{{item.title}}</h3>
           <p class="rate" *ngIf="item.rent_rate==0">Free</p>
           <p class="rate" *ngIf="item.rent_rate>0">Rate:£{{item.rent_rate}}/day</p>
             <p>{{item.location}}</p>

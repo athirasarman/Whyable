@@ -6,15 +6,18 @@
 }
 
 .add-item{
-  padding-left: 10px;
+  padding-left: 10px 10px 10px 10px;
   width:250px;
   background-color: $dashboard-background-color;
   border-style: dashed;
   border-color: $font-color;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   height:300px;
-   border-radius: 25px;
+  border-radius: 25px;
+   display: flex;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 .mat-radio-button {
@@ -38,15 +41,19 @@
 
 .mat-button{
   color:$font-color;
-  height:80px;
-  width:80px;
-  //justify-content: center;
- // align-content: center;
-
+  height:100px;
+  width:100px;
+}
+.mat-icon{
 }
 
 .content{
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  text-align: center;
+  height:100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 
 }
