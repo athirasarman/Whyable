@@ -1,4 +1,4 @@
-import { Component,ChangeDetectorRef, OnInit, ViewChild, ElementRef  } from '@angular/core';
+import { Component,ChangeDetectorRef, OnInit, ViewChild, ElementRef, OnDestroy  } from '@angular/core';
 import { BreakpointObserver, Breakpoints,MediaMatcher } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { Optional } from 'utility-types';
@@ -9,25 +9,34 @@ import { map, shareReplay } from 'rxjs/operators';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
-export class LayoutComponent implements OnInit{
+export class LayoutComponent implements OnDestroy{
+  mobileQuery: MediaQueryList;
   showSidebar=true;
   showResizeButton=false;
 
 
   constructor(private breakpointObserver: BreakpointObserver,
-     private elementRef: ElementRef) {
-    //@ViewChild('drawer') drawer: ElementRef;
+      changeDetectorRef: ChangeDetectorRef,
+     private elementRef: ElementRef,
+      media: MediaMatcher) {
+    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mobileQuery.addListener(this._mobileQueryListener);
+  }
 
+
+  private _mobileQueryListener: () => void;
+
+   ngOnDestroy(): void {
+    this.mobileQuery.removeListener(this._mobileQueryListener);
   }
  ngOnInit()
  {
 
- // drawer=document.getElementById('drawer');
    let isSmallScreen = this.breakpointObserver.isMatched('(max-width: 768px)');
    if(isSmallScreen)
    {
        this.showResizeButton=true;
-      // this.drawer.toggle();
 
    }
    else
@@ -38,12 +47,10 @@ export class LayoutComponent implements OnInit{
 
  onResize(event:any) {  
 
-   //let drawer=document.getElementById('drawer'); 
    let isSmallScreen = this.breakpointObserver.isMatched('(max-width: 768px)');
    if(isSmallScreen)
    {
        this.showResizeButton=true;
-       //this.drawer.toggle();
 
    }
    else
