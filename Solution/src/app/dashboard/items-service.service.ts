@@ -14,8 +14,18 @@ export class ItemsServiceService {
 
   getItemsList():Items
   {
-    console.log(List.data.items);
     this.itemsList=List;
     return this.itemsList;
+  }
+
+  searchItems(searchTerm:string):Items
+  {
+    let searchedItem=this.itemsList;
+    if(searchTerm!="")
+    {
+      
+    }
+    
+    return searchedItem;
   }
 }

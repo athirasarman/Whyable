@@ -29,4 +29,8 @@ export class ItemslistComponent implements OnInit {
   onResize(event:any) {
     this.breakpoint = (event.target.innerWidth <= 768) ? 1 : 4;
   }
+
+  getSearchData():void{
+
+  }
 }
